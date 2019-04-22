@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.2.0", "setuptools_scm[toml]>=3.4.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "LaserGlasses"
+readme = "ReadMe.md"
+description = "This library calculates laser protection glasses according to EN 207 and EN 208 standards."
+authors = [{name = "KOLANICH"}]
+classifiers = [
+	"Development Status :: 4 - Beta",
+	"Environment :: Other Environment",
+	"Intended Audience :: Developers",
+	"License :: Public Domain",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3 :: Only",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["laser", "glasses", "eye", "personal", "protection", "EN 207", "EN 208"]
+license = {text = "Unlicense"}
+requires-python = ">=3.4"
+dynamic = ["version"]
+dependencies = [
+	"pint" # @ git+https://github.com/hgrecco/pint.git
+]
+
+[project.urls]
+Homepage = "https://github.com/KOLANICH-libs/LaserGlasses.py"
+
+[tool.setuptools]
+zip-safe = true
+py-modules = ["LaserGlasses"]
+
+[tool.setuptools_scm]
